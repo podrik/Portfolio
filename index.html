@@ -1,74 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kishan Chand | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kishan Chand | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<button id="darkModeToggle" style="position: fixed; top: 20px; right: 20px; padding: 10px; background: #333; color: #fff; border: none; border-radius: 5px; cursor: pointer; z-index: 999;">
-    🌙 Dark Mode
-</button>
 <body>
-  <header class="header">
-    <div class="container">
-      <h1>👋 Hi, I’m <span>Kishan Chand</span></h1>
-      <p>Aspiring Full-Stack Developer & Data Analyst</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section id="about" class="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>I’m currently on a 31-day bootcamp learning full-stack development and data analysis. Passionate about building beautiful web apps and analyzing real-world datasets.</p>
-      </div>
-    </section>
-
-    <section id="projects" class="projects">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Portfolio Website</h3>
-            <p>This responsive portfolio site built with HTML5, CSS3 & animations.</p>
-          </div>
-          <div class="card">
-            <h3>Excel Dashboard</h3>
-            <p>A student grades dashboard created in Excel.</p>
-          </div>
-          <div class="card">
-            <h3>SQL Data Analysis</h3>
-            <p>Analyzed a sales dataset using SQL queries and shared insights.</p>
-          </div>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">Kishan Chand</h1>
+            <nav id="navMenu" class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button id="menuToggle" class="menu-toggle">☰</button>
         </div>
-      </div>
+    </header>
+
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero" data-aos="fade-up">
+        <div class="container">
+            <h2>Hello, I'm Kishan</h2>
+            <p>Aspiring Full Stack Developer & Data Analyst</p>
+        </div>
     </section>
 
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>📧 Email: kishan@example.com</p>
-        <p>💻 GitHub: <a href="https://github.com/your-username" target="_blank">your-username</a></p>
-        <p>🔗 LinkedIn: <a href="https://linkedin.com/in/your-linkedin" target="_blank">your-linkedin</a></p>
-      </div>
+    <!-- About Section -->
+    <section id="about" class="about" data-aos="fade-right">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I build modern web applications and love working with data to uncover insights.</p>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Kishan Chand. Built with ❤️ and Ubuntu.</p>
-  </footer>
-  <button id="darkModeToggle" style="position: fixed; top: 20px; right: 20px; z-index: 999;">
-    🌙 Toggle Dark Mode
-</button>
-<script src="script.js"></script>
+    <!-- Projects Section -->
+    <section id="projects" class="projects" data-aos="fade-left">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project-card" data-aos="zoom-in">
+                    <h3>Portfolio Website</h3>
+                    <p>My personal portfolio showcasing projects and skills.</p>
+                </div>
+                <div class="project-card" data-aos="zoom-in">
+                    <h3>Data Dashboard</h3>
+                    <p>Interactive data visualizations using Python and JS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</body>
+    <!-- Contact Section -->
+    <section id="contact" class="contact" data-aos="fade-up">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form name="contact" method="POST" data-netlify="true">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kishan Chand. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
